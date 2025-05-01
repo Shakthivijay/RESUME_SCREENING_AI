@@ -149,12 +149,52 @@ st.markdown("""
 # Sidebar for File Upload, Job Description, and Button
 with st.sidebar:
     st.title("📄 AI Resume Optimizer")
+    
+
     uploaded_file = st.file_uploader("📤 Upload your Resume (PDF or DOCX)", type=["pdf", "docx"])
     job_description = st.text_area("📝 Enter Job Description")
     analyze_button = st.button("🔍 Check My Resume")
 
 # Main Content
 st.title("📋 Resume Analysis")
+
+st.markdown('''
+    <div style="
+        margin-top: 20px;
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 15px 20px;
+        border-radius: 10px;
+        color: white;
+        font-weight: bold;
+    ">
+        👈 Upload your resume and enter a job description to get started!
+    </div>
+''', unsafe_allow_html=True)
+
+st.markdown("##  How it works:")
+
+st.markdown('''
+    <div style="
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        color: white;
+    ">
+        <div style="flex: 1; min-width: 150px;">
+            <strong>Step 1:</strong> Upload your resume in PDF or DOCX format and enter the job description you're applying for.
+        </div>
+        <div style="flex: 1; min-width: 150px;">
+            <strong>Step 2:</strong> Our AI analyzes your resume against the job requirements and identifies matching and missing skills.
+        </div>
+        <div style="flex: 1; min-width: 150px;">
+            <strong>Step 3:</strong> Get personalized suggestions on how to improve your resume for the specific job.
+        </div>
+    </div>
+''', unsafe_allow_html=True)
+
+
 
 if analyze_button:
     if uploaded_file and job_description:
