@@ -158,41 +158,43 @@ with st.sidebar:
 # Main Content
 st.title("📋 Resume Analysis")
 
-st.markdown('''
-    <div style="
-        margin-top: 20px;
-        background-color: rgba(255, 255, 255, 0.1);
-        padding: 15px 20px;
-        border-radius: 10px;
-        color: white;
-        font-weight: bold;
-    ">
-        👈 Upload your resume and enter a job description to get started!
-    </div>
-''', unsafe_allow_html=True)
+if not analyze_button:
+    st.markdown('''
+        <div style="
+            margin-top: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 15px 20px;
+            border-radius: 10px;
+            color: white;
+            font-weight: bold;
+        ">
+            👈 Upload your resume and enter a job description to get started!
+        </div>
+    ''', unsafe_allow_html=True)
 
-st.markdown("##  How it works:")
+    st.markdown("##  How it works:")
 
-st.markdown('''
-    <div style="
-        display: flex;
-        justify-content: space-between;
-        gap: 30px;
-        flex-wrap: wrap;
-        margin-top: 20px;
-        color: white;
-    ">
-        <div style="flex: 1; min-width: 150px;">
-            <strong>Step 1:</strong> Upload your resume in PDF or DOCX format and enter the job description you're applying for.
+    st.markdown('''
+        <div style="
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            color: white;
+        ">
+            <div style="flex: 1; min-width: 150px;">
+                <strong>Step 1:</strong> Upload your resume in PDF or DOCX format and enter the job description you're applying for.
+            </div>
+            <div style="flex: 1; min-width: 150px;">
+                <strong>Step 2:</strong> Our AI analyzes your resume against the job requirements and identifies matching and missing skills.
+            </div>
+            <div style="flex: 1; min-width: 150px;">
+                <strong>Step 3:</strong> Get personalized suggestions on how to improve your resume for the specific job.
+            </div>
         </div>
-        <div style="flex: 1; min-width: 150px;">
-            <strong>Step 2:</strong> Our AI analyzes your resume against the job requirements and identifies matching and missing skills.
-        </div>
-        <div style="flex: 1; min-width: 150px;">
-            <strong>Step 3:</strong> Get personalized suggestions on how to improve your resume for the specific job.
-        </div>
-    </div>
-''', unsafe_allow_html=True)
+    ''', unsafe_allow_html=True)
+
 
 
 
